@@ -1,0 +1,28 @@
+<div class="container">
+<table *ngIf="isMaior" class="tabela" border="1px">
+    <tr>
+        <th>Nome:</th>
+        <th>Idade:</th>
+    </tr>
+    <tr *ngFor="let pessoa of lista">
+        <td>{{pessoa.nome}}</td>
+    <td>{{pessoa.idade}}</td>
+</tr>
+
+</table>
+<table *ngIf="!isMaior" class="tabela" border="1px">
+    <tr>
+        <th>Nome:</th>
+        <th>Idade:</th>
+    </tr>
+    <tr *ngFor="let pessoa of listaMenor">
+        <td>{{pessoa.nome}}</td>
+    <td>{{pessoa.idade}}</td>
+</tr>
+
+</table>
+</div>
+<div class="buttons">
+<input type="button" class="button" value="Exibir idades menores que 30" (click)="ExibirIdadesMenores()" *ngIf="isMaior">
+<input type="button" class="button" value="Exibir idades maiores que 30" (click)="ExibirIdadesMaiores()" *ngIf="!isMaior">
+</div>

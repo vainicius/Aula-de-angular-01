@@ -1,0 +1,25 @@
+.container{
+display: flex;
+text-align: center;
+justify-content: center;
+}
+
+.tabela{
+    width: 50rem;
+    background-color: #ba1f3f;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button{
+    background-color: #ffe600;
+    border-radius: 0.5rem;
+    border-color: #ffe600;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}

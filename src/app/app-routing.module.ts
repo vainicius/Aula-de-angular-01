@@ -20,8 +20,7 @@ const routes: Routes = [
         { path: "pessoas/novo", component: PessoasdetailsComponent},
         { path: "pessoas/editar/:id", component: PessoasdetailsComponent},
       ]},
-      { path: "carros-inicio", component: IndexComponent, children: [
-        { path: "carros", component: CarrolistComponent },
+      { path: "carros", component: CarrolistComponent, children: [
         { path: "carros/novo", component: CarrodetailsComponent },
         { path: "carros/editar/:id", component: CarrodetailsComponent }, // Correção aqui
       ]},      

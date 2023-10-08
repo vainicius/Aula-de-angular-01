@@ -1,4 +1,14 @@
 <p>Essa é a tela de login</p>
-<input routerLink="/admin/pessoas" type="button" value="Logar" />
-
+<form>
+    <div class="mb-3">
+        Username:
+        <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" [(ngModel)]="usuario.username" [ngModelOptions]="{standalone: true}"/>
+      <div id="usernameHelp" class="form-text">We'll probably share your data with someone else.</div>
+    </div>
+    <div class="mb-3">
+        Password:
+      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}"/>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+  </form>
 

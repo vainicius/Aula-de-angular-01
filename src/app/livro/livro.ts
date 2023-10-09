@@ -1,5 +1,11 @@
 export class Livro {
 
-nome!: String;
-autor!: String;
+nome!: string;
+autor!: string;
+
+constructor(){
+    this.nome = this.nome;
+    this.autor = this.autor;
+}
+
 }

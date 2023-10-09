@@ -1,1 +1,30 @@
-<p>livrolist works!</p>
+<table class="table table-bordered">
+    <tr>
+        <th>Nome:</th>
+        <th>Autor:</th> 
+    </tr>
+    <tr *ngFor="let livro of livrosList; let i=index">
+        <td>{{livro.nome}}</td>
+        <td>{{livro.autor}}</td>
+    </tr>
+  </table>
+<div class="buttons">
+<button type="button" class="btn btn-success"(click)="abrirModal(abc)">Novo livro</button>
+<button type="button" class="btn btn-outline-primary" routerLink="/admin/pessoas">Voltar</button>
+</div>
+<ng-template #abc let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Cadastrar novo livro</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        
+        <app-livrodetails (retorno)="addList($event)" ></app-livrodetails>      
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+	</div>
+</ng-template>
+  
+  
+ 

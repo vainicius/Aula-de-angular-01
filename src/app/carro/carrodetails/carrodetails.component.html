@@ -1,1 +1,10 @@
-<p>carrodetails works!</p>
+<p class="primeiro mt-1">Digite a placa:</p>
+<input type="text" id="input_1" class="wid form-control " placeholder="Modelo"  [(ngModel)]="carro.placa"/>
+<p>Digite o modelo:</p>
+<input type="text" id="input_2" class="wid form-control " placeholder="Ano"  [(ngModel)]="carro.modelo"/>
+<p>Digite a marca:</p>
+<input type="text" id="input_2" class="wid form-control " placeholder="Ano"  [(ngModel)]="carro.marca"/>
+<p>Digite a cor:</p>
+<input type="text" id="input_2" class="wid form-control " placeholder="Ano"  [(ngModel)]="carro.cor"/>
+
+<button type="button" (click)="salvar()" class="btn btn-success">Salvar</button>
